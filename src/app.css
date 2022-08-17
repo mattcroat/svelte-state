@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:ital,wght@0,400;0,700;1,900&display=swap');
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	padding: 0 2rem;
+	font-family: 'Poppins', sans-serif;
+	color: hsl(220 20% 98%);
+	background-image: linear-gradient(
+		to right top,
+		hsl(220 20% 14%),
+		hsl(220 20% 18%)
+	);
+	background-attachment: fixed;
+}
+
+h1 {
+	max-width: 800px;
+	margin-inline: auto;
+	margin-bottom: 4rem;
+	padding-bottom: 1rem;
+	font-size: 3rem;
+	font-weight: 900;
+	font-style: italic;
+	border-bottom: 10px solid hsl(220 20% 98%);
+	text-align: center;
+}
+
+ul {
+	max-width: 280px;
+	display: flex;
+	flex-direction: column;
+	gap: 0.6rem;
+}
+
+ul {
+	padding: 0;
+}
+
+li {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1rem;
+	padding: 1rem;
+	background-image: linear-gradient(
+		to right top,
+		hsl(220 20% 24%),
+		hsl(220 20% 28%)
+	);
+	border-radius: 20px;
+	box-shadow: 0 0 10px hsl(0 0% 0% / 10%);
+	list-style-position: inside;
+}
+
+label {
+	width: 100%;
+}
+
+input,
+button {
+	font: inherit;
+	border-radius: 20px;
+	border: none;
+	box-shadow: 0 0 10px hsl(0 0% 0% / 10%);
+}
+
+input {
+	max-width: 280px;
+	padding: 0.6rem 1rem;
+	color: hsl(220 20% 98%);
+	background-image: linear-gradient(
+		to right top,
+		hsl(220 20% 40%),
+		hsl(220 20% 60%)
+	);
+}
+
+input[type='checkbox'] {
+	width: 24px;
+	height: 24px;
+}
+
+button {
+	cursor: pointer;
+	width: 24px;
+	height: 24px;
+	display: grid;
+	place-content: center;
+}
+
+.completed {
+	text-decoration: line-through;
+}
+
+details > summary {
+	list-style-type: '👉️ ';
+}
+
+details[open] > summary {
+	list-style-type: '👇️ ';
+}
+
+details > summary {
+	font-weight: 700;
+	font-size: 2rem;
+	margin-bottom: 3rem;
+}
+
+hr {
+	margin-bottom: 3rem;
+	border: 1px solid hsl(220 20% 20%);
+}
