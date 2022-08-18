@@ -1,31 +1,31 @@
 <script lang="ts">
-	import AddTodo from './add-todo.svelte'
-	import TodoList from './todo-list.svelte'
-	import TodosLeft from './todos-left.svelte'
+  import AddTodo from './add-todo.svelte'
+  import TodoList from './todo-list.svelte'
+  import TodosLeft from './todos-left.svelte'
 
-	import { createUniqueId } from '$lib/utils'
-	import type { Todo } from '$lib/types'
+  import { createUniqueId } from '$lib/utils'
+  import type { Todo } from '$lib/types'
 
-	let todos: Todo[] = []
-	let todo = ''
+  let todos: Todo[] = []
+  let todo = ''
 
-	$: todosLeft = todos.filter((todo) => !todo.completed).length
+  $: todosLeft = todos.filter((todo) => !todo.completed).length
 
-	function addTodo() {
-		todos = [
-			...todos,
-			{
-				id: createUniqueId(),
-				description: todo,
-				completed: false,
-			},
-		]
-		todo = ''
-	}
+  function addTodo() {
+    const newTodo = {
+      id: createUniqueId(),
+      description: todo,
+      completed: false,
+    }
 
-	function removeTodo(id: string) {
-		todos = todos.filter((todo) => todo.id !== id)
-	}
+    todos = [...todos, newTodo]
+
+    todo = ''
+  }
+
+  function removeTodo(id: string) {
+    todos = todos.filter((todo) => todo.id !== id)
+  }
 </script>
 
 <AddTodo {addTodo} bind:todo />

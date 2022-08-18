@@ -17,14 +17,13 @@
   setContext('todos', { todos, addTodo, removeTodo, todosLeft })
 
   function addTodo(todo: string) {
-    $todos = [
-      ...$todos,
-      {
-        id: createUniqueId(),
-        description: todo,
-        completed: false,
-      },
-    ]
+    const newTodo = {
+      id: createUniqueId(),
+      description: todo,
+      completed: false,
+    }
+
+    $todos = [...$todos, newTodo]
   }
 
   function removeTodo(id: string) {
