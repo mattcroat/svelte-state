@@ -6,7 +6,13 @@
 	box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+	width: 1px;
+	background-color: hsl(220 20% 14%);
+}
+
 body {
+	height: 2000px;
 	padding: 0 2rem;
 	font-family: 'Poppins', sans-serif;
 	color: hsl(220 20% 98%);
