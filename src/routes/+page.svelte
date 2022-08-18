@@ -2,6 +2,7 @@
 	import Props from '$lib/01-props/index.svelte'
 	import Bind from '$lib/02-bind/index.svelte'
 	import Events from '$lib/03-events/index.svelte'
+	import Context from '$lib/04-context/index.svelte'
 </script>
 
 <svelte:head>
@@ -27,4 +28,11 @@
 <details>
 	<summary>Dispatching Events</summary>
 	<Events />
+</details>
+
+<hr />
+
+<details>
+	<summary>Context API</summary>
+	<Context />
 </details>
