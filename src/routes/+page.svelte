@@ -1,20 +1,30 @@
 <script lang="ts">
-	import { slide } from 'svelte/transition'
-
-	import Colocation from '$lib/01-colocation/index.svelte'
+	import Props from '$lib/01-props/index.svelte'
 	import Bind from '$lib/02-bind/index.svelte'
+	import Events from '$lib/03-events/index.svelte'
 </script>
 
-<h1>Svelte State Management 🔥</h1>
+<svelte:head>
+	<title>State Management</title>
+</svelte:head>
 
-<details transition:slide>
-	<summary>Colocation</summary>
-	<Colocation />
+<h1>Svelte State Management🔥</h1>
+
+<details>
+	<summary>Props</summary>
+	<Props />
 </details>
 
 <hr />
 
 <details>
-	<summary>Bind</summary>
+	<summary>Bindings</summary>
 	<Bind />
+</details>
+
+<hr />
+
+<details>
+	<summary>Dispatching Events</summary>
+	<Events />
 </details>
