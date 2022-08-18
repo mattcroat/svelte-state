@@ -8,6 +8,8 @@
 
 	let todos: Todo[] = []
 
+	$: todosLeft = todos.filter((todo) => !todo.completed).length
+
 	function addTodo(todo: string) {
 		todos = [
 			...todos,
@@ -26,8 +28,6 @@
 	function removeTodo(id: string) {
 		todos = todos.filter((todo) => todo.id !== id)
 	}
-
-	$: todosLeft = todos.filter((todo) => !todo.completed).length
 </script>
 
 <AddTodo {addTodo} />
