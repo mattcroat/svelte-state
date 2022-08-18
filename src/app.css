@@ -22,11 +22,12 @@ h1 {
 	max-width: 800px;
 	margin-inline: auto;
 	margin-bottom: 4rem;
-	padding-bottom: 1rem;
+	padding: 2rem;
 	font-size: 3rem;
 	font-weight: 900;
 	font-style: italic;
-	border-bottom: 10px solid hsl(220 20% 98%);
+	border: 4px solid hsl(220 20% 98%);
+	border-radius: 20px;
 	text-align: center;
 }
 
