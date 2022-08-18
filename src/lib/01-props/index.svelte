@@ -2,6 +2,8 @@
 	import AddTodo from './add-todo.svelte'
 	import TodoList from './todo-list.svelte'
 	import TodosLeft from './todos-left.svelte'
+
+	import { createUniqueId } from '$lib/utils'
 	import type { Todo } from '$lib/types'
 
 	let todos: Todo[] = []
@@ -10,7 +12,7 @@
 		todos = [
 			...todos,
 			{
-				id: new Date().getTime().toString(),
+				id: createUniqueId(),
 				description: todo,
 				completed: false,
 			},
