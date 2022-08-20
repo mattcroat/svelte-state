@@ -1,34 +1,16 @@
 <script lang="ts">
-  import AddTodo from './add-todo.svelte'
-  import TodoList from './todo-list.svelte'
-  import TodosLeft from './todos-left.svelte'
+	import Count from './count.svelte'
+	import Increment from './increment.svelte'
+	import Decrement from './decrement.svelte'
 
-  import { createUniqueId } from '$lib/utils'
-  import type { Todo } from '$lib/types'
+	let count = 0
 
-  let todos: Todo[] = []
-
-  $: todosLeft = todos.filter((todo) => !todo.completed).length
-
-  function addTodo(todo: string) {
-    const newTodo = {
-      id: createUniqueId(),
-      description: todo,
-      completed: false,
-    }
-
-    todos = [...todos, newTodo]
-  }
-
-  function toggleCompleted(todoIndex: number) {
-    todos[todoIndex].completed = !todos[todoIndex].completed
-  }
-
-  function removeTodo(id: string) {
-    todos = todos.filter((todo) => todo.id !== id)
-  }
+	const increment = () => (count += 1)
+	const decrement = () => (count -= 1)
 </script>
 
-<AddTodo {addTodo} />
-<TodoList {todos} {toggleCompleted} {removeTodo} />
-<TodosLeft {todosLeft} />
+<div class="counter">
+	<Increment {increment} />
+	<Count {count} />
+	<Decrement {decrement} />
+</div>

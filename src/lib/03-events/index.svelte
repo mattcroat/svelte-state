@@ -1,30 +1,18 @@
 <script lang="ts">
-  import AddTodo from './add-todo.svelte'
-  import TodoList from './todo-list.svelte'
-  import TodosLeft from './todos-left.svelte'
+	import Mouse from './mouse.svelte'
 
-  import { createUniqueId } from '$lib/utils'
-  import type { Todo } from '$lib/types'
+	let x = 0
+	let y = 0
 
-  let todos: Todo[] = []
+	function updatePosition(event: CustomEvent<MouseEvent>) {
+		let target = event.detail.target as HTMLDivElement
+		let element = target.getBoundingClientRect()
 
-  $: todosLeft = todos.filter((todo) => !todo.completed).length
-
-  function addTodo(event: CustomEvent) {
-    const newTodo = {
-      id: createUniqueId(),
-      description: event.detail,
-      completed: false,
-    }
-
-    todos = [...todos, newTodo]
-  }
-
-  function removeTodo(event: CustomEvent) {
-    todos = todos.filter((todo) => todo.id !== event.detail.id)
-  }
+		x = event.detail.clientX - element.left
+		y = event.detail.clientY - element.top
+	}
 </script>
 
-<AddTodo on:add={addTodo} />
-<TodoList on:remove={removeTodo} bind:todos />
-<TodosLeft {todosLeft} />
+<Mouse on:updatePosition={updatePosition} />
+
+<p>x: {x}, y: {y}</p>
