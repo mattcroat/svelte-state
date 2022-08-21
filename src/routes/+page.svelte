@@ -5,6 +5,7 @@
 	import Stores from '$lib/04-stores/index.svelte'
 	import Context from '$lib/05-context/index.svelte'
 	import Production, { bananas } from '$lib/06-module/index.svelte'
+	import Url from '$lib/07-url/index.svelte'
 </script>
 
 <svelte:head>
@@ -55,4 +56,11 @@
 	{#if $bananas.length}
 		<div class="produce">{$bananas.join('')}</div>
 	{/if}
+</details>
+
+<hr />
+
+<details>
+	<summary>URLs</summary>
+	<Url />
 </details>
