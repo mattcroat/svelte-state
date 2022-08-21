@@ -61,6 +61,6 @@
 <hr />
 
 <details>
-	<summary>URLs</summary>
+	<summary>URL</summary>
 	<Url />
 </details>
