@@ -1,8 +1,18 @@
 <script lang="ts">
 	import Canvas from './canvas.svelte'
-	import Box from './box.svelte'
+	import Circle from './circle.svelte'
+
+	let width = 600
+	let height = 400
 </script>
 
-<Canvas width={580} height={400}>
-	<Box x={20} y={20} width={100} height={100} />
+<Canvas {width} {height}>
+	<Circle
+		x={width / 2}
+		y={height / 2}
+		radius={40}
+		startAngle={0}
+		endAngle={2 * Math.PI}
+		color="aquamarine"
+	/>
 </Canvas>
