@@ -5,4 +5,6 @@
 
 <Toast />
 
-<button on:click={() => toast('🔥 Svelte is fire')}>Show notification</button>
+<button on:click={() => toast('🔥 Svelte is fire')}>
+	Show notification
+</button>

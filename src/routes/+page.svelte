@@ -4,7 +4,9 @@
 	import Events from '$lib/03-events/index.svelte'
 	import Stores from '$lib/04-stores/index.svelte'
 	import Context from '$lib/05-context/index.svelte'
-	import Production, { bananas } from '$lib/06-module/index.svelte'
+	import Production, {
+		bananas,
+	} from '$lib/06-module/index.svelte'
 	import Url from '$lib/07-url/index.svelte'
 </script>
 
