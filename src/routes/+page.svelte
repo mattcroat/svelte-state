@@ -4,6 +4,7 @@
 	import Events from '$lib/03-events/index.svelte'
 	import Stores from '$lib/04-stores/index.svelte'
 	import Context from '$lib/05-context/index.svelte'
+	import Production, { bananas } from '$lib/06-module/index.svelte'
 </script>
 
 <svelte:head>
@@ -43,4 +44,15 @@
 <details>
 	<summary>Context API</summary>
 	<Context />
+</details>
+
+<hr />
+
+<details>
+	<summary>Module Context</summary>
+	<Production />
+	<Production />
+	{#if $bananas.length}
+		<div class="produce">{$bananas.join('')}</div>
+	{/if}
 </details>
