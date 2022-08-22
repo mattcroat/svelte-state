@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { setContext, onMount } from 'svelte'
+	import { setContext } from 'svelte'
 
 	setContext('canvas', {
 		getCanvas: () => canvas,

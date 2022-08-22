@@ -86,7 +86,6 @@ hr {
 	height: 200px;
 	background-color: hsl(220 20% 24%);
 	border-radius: 20px;
-	cursor: pointer;
 	box-shadow: 0 0 10px hsl(0 0% 0% / 10%);
 }
 

@@ -6,8 +6,7 @@
 
 	let items: Item[] = [1, 2, 3, 4]
 	let order: Order =
-		($page.url.searchParams.get('order') as Order) ??
-		'ascending'
+		($page.url.searchParams.get('order') as Order) ?? 'asc'
 
 	$: sortedItems = sortItems(order)
 

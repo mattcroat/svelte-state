@@ -3,9 +3,9 @@
 
 	const dispatch = createEventDispatcher()
 
-	function handleClick(event: MouseEvent) {
+	function handleMouseMove(event: MouseEvent) {
 		dispatch('updatePosition', event)
 	}
 </script>
 
-<div class="mousearea" on:mousemove={handleClick} />
+<div class="mousearea" on:mousemove={handleMouseMove} />

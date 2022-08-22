@@ -6,4 +6,4 @@
 </script>
 
 <Input bind:input />
-<Output bind:input />
+<Output {input} />
