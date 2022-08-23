@@ -5,8 +5,8 @@
 	let y = 0
 
 	function updatePosition(event: CustomEvent<MouseEvent>) {
-		let target = event.detail.target as HTMLDivElement
-		let element = target.getBoundingClientRect()
+		const target = event.detail.target as HTMLDivElement
+		const element = target.getBoundingClientRect()
 
 		x = event.detail.clientX - element.left
 		y = event.detail.clientY - element.top
@@ -15,4 +15,6 @@
 
 <Mouse on:updatePosition={updatePosition} />
 
-<p>x: {x}, y: {y}</p>
+<div>
+	x: {x}, y: {y}
+</div>
